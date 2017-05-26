@@ -23,10 +23,6 @@ function TrafficService($http, $q) {
     return dfd.promise;
   }
 
-  function getDataById(id){
-
-  }
-
   checkCurrentStatus();
   
   return{
