@@ -3,6 +3,8 @@ Prerequisits
 
 Install a few dependencies globally::
 
+```bash
+
 $ npm install -g babel
 $ npm install -g webpack
 $ npm install -g webpack-dev-server
