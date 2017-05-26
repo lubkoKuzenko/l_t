@@ -10,6 +10,7 @@ npm install -g webpack-dev-server
 npm install -g eslint
 
 ### Quick start
+```
 
 ```bash
 
@@ -18,3 +19,4 @@ npm install
 
 # start the server
 npm start
+```
