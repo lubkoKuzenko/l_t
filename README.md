@@ -1,14 +1,13 @@
-Prerequisits
-------------
+### Prerequisits
 
-Install a few dependencies globally::
+Install a few dependencies globally:
 
 ```bash
 
-$ npm install -g babel
-$ npm install -g webpack
-$ npm install -g webpack-dev-server
-$ npm install -g eslint
+npm install -g babel
+npm install -g webpack
+npm install -g webpack-dev-server
+npm install -g eslint
 
 ### Quick start
 
