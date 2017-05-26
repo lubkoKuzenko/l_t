@@ -1,20 +1,41 @@
 import * as angular from 'angular';
 
-export class TrafficService {
-  
-  constructor($http) {
-    this._$http = $http;
-  }
+TrafficService.$inject = ['$http', '$q'];
+function TrafficService($http, $q) {
 
-  checkCurrentStatus() {
+  var dfd = $q.defer();
+  var data = null;
+  
+  function checkCurrentStatus() {
     const url = 'http://api.citysdk.waag.org/layers/parking.garage/objects?per_page=25';
 
-    this.data = this._$http.get(url);
-    return this.data;
+    return $http.get(url)
+      .then((response) => {
+        data = response.data;
+        dfd.resolve(response.data);
+      });
+  }
+
+  function getData(){
+    if (0 === dfd.promise.$$state.status) {
+      checkCurrentStatus();
+    }
+    return dfd.promise;
+  }
+
+  function getDataById(id){
+
+  }
+
+  checkCurrentStatus();
+  
+  return{
+    getData:getData,
+    checkCurrentStatus:checkCurrentStatus
   }
 }
 
 angular
   .module('services')
-  .service('TrafficService', TrafficService);
+  .factory('TrafficService', TrafficService);
 
