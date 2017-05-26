@@ -1,10 +1,7 @@
 export default class HomeController {
 
-	constructor($rootScope, $scope, $state, $http, $location, TrafficService) {
+	constructor($scope, $location) {
 		this.$location = $location;
-		this.$rootScope = $rootScope;
-		this.$state = $state;
-		this.TrafficService = TrafficService;
 		this.$scope = $scope;	
 	}
 	
