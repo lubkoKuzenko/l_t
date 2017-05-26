@@ -11,7 +11,7 @@ const aboutModule = angular.module('about', [
   $stateProvider
     .state('item', {
       url: '/item/:id',
-      template: '<item items="vm.items"></item>'
+      template: '<item></item>'
     });
 })
 

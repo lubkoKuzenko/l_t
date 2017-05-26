@@ -7,14 +7,12 @@ export default class ItemController {
 		this.$rootScope = $rootScope;
 		this.$scope = $scope;
 
-		var vm = this;
-
-		this.$scope.$watch("vm.items", function(item){
+		this.$scope.$watch("vm.items", (item) => {
 			if(item){
-				vm.item = item[$stateParams.id];
-				vm.longCapacity = 100 * vm.item.properties.layers['parking.garage'].data.FreeSpaceLong / vm.item.properties.layers['parking.garage'].data.LongCapacity || 0.000001;
-				vm.shortCapacity = 100 * vm.item.properties.layers['parking.garage'].data.FreeSpaceShort / vm.item.properties.layers['parking.garage'].data.ShortCapacity || 0.00001;
-				vm.coordinates = vm.item.geometry.coordinates;
+				this.item = item[$stateParams.id];
+				this.longCapacity = 100 * this.item.properties.layers['parking.garage'].data.FreeSpaceLong / this.item.properties.layers['parking.garage'].data.LongCapacity || 0.000001;
+				this.shortCapacity = 100 * this.item.properties.layers['parking.garage'].data.FreeSpaceShort / this.item.properties.layers['parking.garage'].data.ShortCapacity || 0.00001;
+				this.coordinates = this.item.geometry.coordinates;
 			}
 		})
 	}
