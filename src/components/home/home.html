@@ -1,0 +1,40 @@
+<header>
+	<h1>Header</h1>
+	<!--button type="button" ng-click="vm.refresh()" class="btn pull-right btn-primary">
+		<span class="glyphicon glyphicon-refresh pull-left"></span>
+		<span class="refresh">Refresh</span>
+	</button-->
+</header>
+<main>
+	<table class="table table-striped table-bordered table-hover">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Title</th>
+				<th>Publication Date</th>
+				<th>FreeSpaceShort</th>
+				<th>FreeSpaceLong</th>
+				<th>ShortCapacity</th>
+				<th>LongCapacity</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody data-link="row" class="rowlink">
+			<tr ng-repeat="item in vm.items" ng-click="vm.showClient(item)"> 
+				<td scope="row">{{$index+1}}</td> 
+				<td>{{item.properties.title}}</td> 
+				<td>{{item.properties.layers['parking.garage'].data.PubDate | date}}</td> 
+				<td>{{item.properties.layers['parking.garage'].data.FreeSpaceShort}}</td> 
+				<td>{{item.properties.layers['parking.garage'].data.FreeSpaceLong}}</td> 
+				<td>{{item.properties.layers['parking.garage'].data.ShortCapacity}}</td> 
+				<td>{{item.properties.layers['parking.garage'].data.LongCapacity}}</td> 
+				<td>
+					<span class="glyphicon glyphicon glyphicon-ok-sign pull-left" ng-class="item.available ? 'green' : 'red'"></span>
+					<span ng-if="item.available" class="glyphicon glyphicon-arrow-right pull-right"></span>
+				</td> 
+			</tr>
+		</tbody>
+	</table>
+</main>
+
+

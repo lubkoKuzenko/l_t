@@ -1,0 +1,26 @@
+<section>
+	<h1>{{vm.item.properties.title}}</h1>
+	<button type="button" ng-click="vm.back()" class="btn pull-right btn-primary">Back</button>
+</section>
+
+<h3>Short Capacity</h3>
+<div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="vm.shortCapacity" aria-valuemin="0" aria-valuemax="100" ng-style="{'width': vm.shortCapacity+'%'}">
+    {{vm.shortCapacity | number:2}}%
+  </div>
+</div>
+
+<h3>Long Capacity</h3>
+<div class="progress">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="vm.longCapacity" aria-valuemin="0" aria-valuemax="100" ng-style="{'width': vm.longCapacity+'%'}">
+    {{vm.longCapacity | number:2}}%
+  </div>
+</div>
+
+<div class="panel panel-default">	
+	<div class="panel-body">
+    <ng-map center="{{vm.coordinates}}" zoom="4">
+      <marker position="{{vm.coordinates}}"></marker>
+    </ng-map>
+	</div>
+</div>
