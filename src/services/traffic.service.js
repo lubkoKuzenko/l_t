@@ -16,15 +16,15 @@ function TrafficService($http, $q) {
       });
   }
 
-  function getData(){
-    if (0 === dfd.promise.$$state.status) {
+  function getData() {
+    if(data) {
+      dfd.resolve(data);
+    } else {
       checkCurrentStatus();
     }
     return dfd.promise;
   }
 
-  checkCurrentStatus();
-  
   return{
     getData:getData,
     checkCurrentStatus:checkCurrentStatus
