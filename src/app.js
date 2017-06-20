@@ -1,6 +1,10 @@
 import $ from 'jquery';
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import ngAnimate from 'angular-animate';
+
+// Bootstrap UI
+import 'angular-ui-bootstrap/ui-bootstrap-tpls';
 
 // Highcharts
 import 'highcharts-ng/dist/highcharts-ng';
@@ -23,13 +27,16 @@ import './services';
 
 // styles
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'angular-ui-bootstrap/ui-bootstrap-csp.css';
 import 'highcharts-ng/dist/highcharts-ng.css';
 import 'ng-table/bundles/ng-table';
 import './styles.scss';
 
 angular.module('myApp', [
   uiRouter,
+  ngAnimate,
   'services',
+  'ui.bootstrap',
   'app.components'
 ])
 
