@@ -3,7 +3,8 @@ import uiRouter from 'angular-ui-router';
 import homeComponent from './home.component';
 
 const homeModule = angular.module('home', [
-  uiRouter
+  uiRouter,
+  'ngTable'
 ])
 
 .config(($stateProvider, $urlRouterProvider) => {
@@ -12,7 +13,7 @@ const homeModule = angular.module('home', [
   $stateProvider
     .state('home', {
       url: '/',
-      template: '<home items="vm.items"></home>'
+      template: '<home></home>'
     });
 })
 

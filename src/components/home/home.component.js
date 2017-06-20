@@ -6,10 +6,7 @@ let homeComponent = {
   scope: {},
   template,
   controller,
-  controllerAs: 'vm',
-  bindings: {
-    items: '='
-  }
+  controllerAs: 'vm'
 };
 
 export default homeComponent;
