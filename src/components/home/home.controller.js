@@ -14,8 +14,4 @@ export default class HomeController {
 			alert("No available places.")
 		}
 	}
-
-	info(){
-		this.$location.path("/info/");
-	}
 }

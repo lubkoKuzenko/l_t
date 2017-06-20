@@ -9,7 +9,7 @@ const infoModule = angular.module('info', [
 .config(($stateProvider, $urlRouterProvider) => {
   $stateProvider
     .state('info', {
-      url: '/info/',
+      url: '/info',
       template: '<info></info>'
     });
 })
