@@ -2,6 +2,7 @@ import $ from 'jquery';
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import ngAnimate from 'angular-animate';
+import uiMask from 'angular-ui-mask';
 
 // Bootstrap UI
 import 'angular-ui-bootstrap/ui-bootstrap-tpls';
@@ -19,6 +20,9 @@ import 'angular-chart.js/dist/angular-chart.js';
 // Ng-Table
 import 'ng-table/bundles/ng-table';
 
+// UI Mask
+import 'angular-ui-mask/dist/mask.min';
+
 // main app component
 import AppComponent from './app.component';
 
@@ -32,12 +36,17 @@ import 'highcharts-ng/dist/highcharts-ng.css';
 import 'ng-table/bundles/ng-table';
 import './styles.scss';
 
-angular.module('myApp', [
-  uiRouter,
-  ngAnimate,
-  'services',
-  'ui.bootstrap',
-  'app.components'
-])
-
-.directive('app', AppComponent);
+angular
+  .module('myApp', [
+    uiRouter,
+    ngAnimate,
+    uiMask,
+    'services',
+    'ui.bootstrap',
+    'app.components'
+  ])
+  .config(['uiMask.ConfigProvider', function(uiMaskConfigProvider) {
+    uiMaskConfigProvider.clearOnBlur(true);
+    uiMaskConfigProvider.eventsToHandle(['input', 'keyup', 'click']);
+  }])
+  .directive('app', AppComponent);

@@ -1,0 +1,113 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <div class="panel-title">Test Form</div>
+    </div>  
+    <div class="panel-body" >
+        <form name="userForm" ng-submit="vm.onSubmit()">
+            <div class="form-group" ng-class="userForm.firstname.$dirty && userForm.firstname.$invalid ? 'has-error' : ''">
+                <label for="status">First Name </label>
+                <input type="text" class="form-control" name="firstname" placeholder="First Name" ng-model="vm.user.firstname" required />
+
+                <div class="error-block" ng-show="userForm.firstname.$dirty && userForm.firstname.$invalid">
+                    <label class="control-label" ng-show="userForm.firstname.$error.required">First name is required.</span>
+                    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                    <span id="inputError2Status" class="sr-only">(error)</span>
+                </div>
+            </div>
+            <div class="form-group" ng-class="userForm.lastname.$dirty && userForm.lastname.$invalid ? 'has-error' : ''">
+                <label for="status">Last Name</label>
+                <input type="text" class="form-control" name="lastname" placeholder="Last Name" ng-model="vm.user.lastname" required>
+                <div class="error-block" ng-show="userForm.lastname.$dirty && userForm.lastname.$invalid">
+                    <label class="control-label" ng-show="userForm.lastname.$error.required">Last name is required</label>
+                    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                    <span id="inputError2Status" class="sr-only">(error)</span>
+                </div>
+            </div>
+            <div class="form-group" ng-class="userForm.email.$dirty && userForm.email.$invalid ? 'has-error' : ''">
+                <label for="status">Email</label>
+                <input type="text" class="form-control" name="email" placeholder="Email" ng-model="vm.user.email" required>
+                <div class="error-block" ng-show="userForm.email.$dirty && userForm.email.$invalid">
+                    <label class="control-label" ng-show="userForm.email.$error.required">Email is required.</label>
+                    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                    <span id="inputError2Status" class="sr-only">(error)</span>
+                </div>
+            </div>
+            <div class="form-group has-feedback" ng-class="{ 'has-error': vm.submited }">
+                <label for="status" class="control-label">Mobile Number</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="mobile" 
+                    name="mobile" 
+                    ng-model="vm.user.mobile"
+                    ui-mask="(999) 999-9999"  
+                    ui-mask-placeholder 
+                    ui-mask-placeholder-char="_">
+
+                <div class="error-block" ng-show="vm.submited">
+                    <label class="control-label" for="inputError2">Input with error</label>
+                    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                    <span id="inputError2Status" class="sr-only">(error)</span>
+                </div>
+            </div>
+            <div class="form-group has-feedback" ng-class="{ 'has-error': vm.submited }">
+                <label for="status" class="control-label">Gender</label>
+                <div class="form-control-static">
+                    <label class="radio-inline"> <input type="radio" name="gender" id="id_gender_1" value="M"  style="margin-bottom: 10px">Male</label>
+                    <label class="radio-inline"> <input type="radio" name="gender" id="id_gender_2" value="F"  style="margin-bottom: 10px">Female </label>
+                </div>
+                <div class="error-block" ng-show="vm.submited">
+                    <label class="control-label" for="inputError2">Input with error</label>
+                    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                    <span id="inputError2Status" class="sr-only">(error)</span>
+                </div>
+            </div>
+            <div class="form-group has-feedback" ng-class="{ 'has-error': vm.submited }">
+                <label for="status" class="control-label">Status</label>
+                <select class="form-control" id="status" name="status" ng-model="vm.user.status">
+                    <option>Paid</option>
+                    <option>Unpaid</option>
+                </select>
+                <div class="error-block" ng-show="vm.submited">
+                    <span id="inputError2Status" class="sr-only">(error)</span>
+                </div>
+            </div>
+
+            <div class="form-group has-feedback" ng-class="{ 'has-error': vm.submited }">
+                <label for="status" class="control-label">Option</label>
+                <div class="form-control-static">
+                    <label class="checkbox-inline control-label"><input type="checkbox">Option 1</label>
+                    <label class="checkbox-inline control-label"><input type="checkbox">Option 2</label>
+                    <label class="checkbox-inline control-label"><input type="checkbox">Option 3</label>
+                </div>
+                <div class="error-block" ng-show="vm.submited">
+                    <label class="control-label" for="inputError2">Input with error</label>
+                    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                    <span id="inputError2Status" class="sr-only">(error)</span>
+                </div>
+            </div>
+
+            <fieldset class="scheduler-border row col-md-5">
+                <legend class="scheduler-border">Message</legend>
+                <div class="form-group has-feedback" ng-class="{ 'has-error': vm.submited }">
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" ng-model="vm.user.subject">
+                    <div class="error-block" ng-show="vm.submited">
+                        <label class="control-label" for="inputError2">Input with error</label>
+                    </div>
+                </div>
+                <div class="form-group has-feedback" ng-class="{ 'has-error': vm.submited }">
+                    <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7" ng-model="vm.user.message"></textarea>             
+                    <div class="error-block" ng-show="vm.submited">
+                        <span id="inputError2Status" class="sr-only">(error)</span>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="clearfix"></div>
+
+            <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+        </form>
+    </div>
+    <div class="panel-footer">
+        <pre>{{ vm.user | json}}</pre>
+    </div>
+</div>

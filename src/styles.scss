@@ -18,3 +18,10 @@ body {
 .red{
     color: red;
 }
+
+.error-block {
+    display: none;
+}
+.has-error .error-block {
+    display: block;
+}
