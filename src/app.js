@@ -5,6 +5,9 @@ import ngAnimate from 'angular-animate';
 import uiMask from 'angular-ui-mask';
 import Bootstrap from 'angular-ui-bootstrap';
 
+// Slider
+import 'angularjs-slider/dist/rzslider';
+
 // Highcharts
 import 'highcharts-ng/dist/highcharts-ng';
 
@@ -31,6 +34,7 @@ import './services';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'angular-ui-bootstrap/ui-bootstrap-csp.css';
 import 'highcharts-ng/dist/highcharts-ng.css';
+import 'angularjs-slider/dist/rzslider.min.css';
 import 'ng-table/bundles/ng-table';
 import './styles.scss';
 
@@ -40,6 +44,7 @@ angular
     ngAnimate,
     uiMask,
     Bootstrap,
+    'rzModule',
     'services',
     'app.components'
   ])
