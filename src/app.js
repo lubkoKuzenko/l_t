@@ -3,9 +3,7 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import ngAnimate from 'angular-animate';
 import uiMask from 'angular-ui-mask';
-
-// Bootstrap UI
-import 'angular-ui-bootstrap/ui-bootstrap-tpls';
+import Bootstrap from 'angular-ui-bootstrap';
 
 // Highcharts
 import 'highcharts-ng/dist/highcharts-ng';
@@ -41,8 +39,8 @@ angular
     uiRouter,
     ngAnimate,
     uiMask,
+    Bootstrap,
     'services',
-    'ui.bootstrap',
     'app.components'
   ])
   .config(['uiMask.ConfigProvider', function(uiMaskConfigProvider) {
