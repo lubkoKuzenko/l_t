@@ -26,6 +26,7 @@
     "angular-chart.js": "^1.1.1",
     "angular-sanitize": "^1.4.7",
     "angular-schema-form": "^0.8.12",
+    "angular-snap": "^1.8.5",
     "angular-ui-bootstrap": "^0.14.3",
     "angular-ui-mask": "^1.8.7",
     "angular-ui-router": "^0.3.2",

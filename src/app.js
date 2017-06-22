@@ -5,6 +5,9 @@ import ngAnimate from 'angular-animate';
 import uiMask from 'angular-ui-mask';
 import Bootstrap from 'angular-ui-bootstrap';
 
+// Snap.js
+import 'angular-snap/angular-snap';
+
 // Slider
 import 'angularjs-slider/dist/rzslider';
 
@@ -36,6 +39,7 @@ import 'angular-ui-bootstrap/ui-bootstrap-csp.css';
 import 'highcharts-ng/dist/highcharts-ng.css';
 import 'angularjs-slider/dist/rzslider.min.css';
 import 'ng-table/bundles/ng-table';
+import 'angular-snap/angular-snap.css';
 import './styles.scss';
 
 angular
@@ -44,6 +48,7 @@ angular
     ngAnimate,
     uiMask,
     Bootstrap,
+    'snap',
     'rzModule',
     'services',
     'app.components'
@@ -52,4 +57,6 @@ angular
     uiMaskConfigProvider.clearOnBlur(true);
     uiMaskConfigProvider.eventsToHandle(['input', 'keyup', 'click']);
   }])
+  .config(snapRemoteProvider => { snapRemoteProvider.globalOptions.disable = 'right'; })
+  // or snapRemoteProvider.globalOptions = { disable: 'right', // ... others options }
   .directive('app', AppComponent);
