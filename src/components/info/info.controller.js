@@ -4,6 +4,11 @@ export default class InfoController {
 		this.$scope = $scope;
 		this.$timeout = $timeout;
 		this.visible = false;
+
+		this.theBestVideo = '0qoW58B7sOM';
+		this.playerVars = {
+			autoplay: false
+		}
 	}
 
 	$onInit(){
@@ -13,8 +18,7 @@ export default class InfoController {
 				floor: 0,
 				ceil: 500
 			}
-		};
-		
+		};		
 	}
 
 	toggle(){

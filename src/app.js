@@ -40,6 +40,7 @@ import 'highcharts-ng/dist/highcharts-ng.css';
 import 'angularjs-slider/dist/rzslider.min.css';
 import 'ng-table/bundles/ng-table';
 import 'angular-snap/angular-snap.css';
+
 import './styles.scss';
 
 angular
