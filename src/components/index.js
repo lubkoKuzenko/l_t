@@ -4,6 +4,7 @@ import About from './about/about';
 import Info from './info/info';
 import Form from './app-form/app-form';
 import Chart from './chart/chart';
+import Nested from './nested/nested';
 
 export default angular.module('app.components', [
   Home.name,
@@ -11,4 +12,5 @@ export default angular.module('app.components', [
   Info.name,
   Form.name,
   Chart.name,
+  Nested.name
 ]);
