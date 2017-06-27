@@ -1,0 +1,9 @@
+<h4 class="great pull-right">{{vm.progress | number:2}} %</h4>
+<div id="scrollArea" class="clusterize-scroll">
+    <ul id="contentArea" class="clusterize-content listrap">
+        <li ng-repeat="item in vm.rows">
+            <name name=item.properties.layers["parking.garage"].data.Name index=$index></name>
+            <button class="btn pull-right" data-click-attr={{$index}}>Click</button>
+        </li>
+    </ul>
+</div>

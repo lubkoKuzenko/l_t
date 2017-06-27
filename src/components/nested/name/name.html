@@ -1,8 +1,8 @@
+<strong>{{vm.index + 1}}</strong>
 <div class="listrap-toggle">
     <span></span>
-    <img ng-if="vm.data.Name" src="http://lorempixel.com/60/60/people/?v=1" class="img-circle" />
-    <img ng-if="!vm.data.Name" src="http://lorempixel.com/60/60/people/?v=2" class="img-circle" />
+    <img ng-if="vm.name" src="http://lorempixel.com/60/60/people/?v=1" class="img-circle" />
+    <img ng-if="!vm.name" src="http://lorempixel.com/60/60/people/?v=2" class="img-circle" />
 </div>
-<strong ng-if="vm.data.Name">{{vm.data.Name}}</strong>
-<strong ng-if="!vm.data.Name">Default</strong>
-<button class="btn pull-right" ng-click="vm.onButtonClick(vm.data.Name)">Click</button>
+<strong ng-if="vm.name">{{vm.name}}</strong>
+<strong ng-if="!vm.name">Default</strong>

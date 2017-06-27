@@ -8,7 +8,8 @@ let NameComponent = {
   controller,
   controllerAs: 'vm',
   bindings:{
-      data: '<'
+      name: '<',
+      index: '<'
   }
 };
 

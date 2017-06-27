@@ -39,6 +39,7 @@ import 'angular-ui-bootstrap/ui-bootstrap-csp.css';
 import 'highcharts-ng/dist/highcharts-ng.css';
 import 'angularjs-slider/dist/rzslider.min.css';
 import 'ng-table/bundles/ng-table';
+import 'clusterize.js/clusterize.css';
 import 'angular-snap/angular-snap.css';
 
 import './styles.scss';

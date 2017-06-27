@@ -18,7 +18,7 @@ export class TrafficService {
   }
 
   checkCurrentStatus() {
-    const url = 'http://api.citysdk.waag.org/layers/parking.garage/objects?per_page=25';
+    const url = 'http://api.citysdk.waag.org/layers/parking.garage/objects?per_page=50';
 
     return this.$http.get(url)
       .then((response) => {

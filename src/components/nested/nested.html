@@ -1,11 +1,4 @@
 <div class="container">
-    <h1>{{vm.emitData}}</h1>
-    
-	<div class="row">
-		<ul class="listrap">
-            <li ng-repeat="item in vm.items">
-                <name data=item.properties.layers["parking.garage"].data></name>
-            </li>
-        </ul>
-	</div>
+    <h1>{{vm.emitData || 'Default'}}</h1>
+    <clusterize rows="vm.items"></clusterize>
 </div>
