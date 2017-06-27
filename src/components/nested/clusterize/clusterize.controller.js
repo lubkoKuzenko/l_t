@@ -34,6 +34,6 @@ export default class ClusterizeController {
   }
 
   onButtonClick(data) {
-    this.$scope.$emit('item_title', data);
+    this.$scope.$emit('item_title', data ? data : "Default");
   }
 }

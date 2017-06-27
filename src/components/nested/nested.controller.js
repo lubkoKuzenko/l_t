@@ -6,7 +6,7 @@ export default class NestedController {
     });
 
     $scope.$on('item_title', (event, data) => {
-      this.emitData = this.items[data].properties.layers["parking.garage"].data.Name;
+      this.emitData = data;
       $scope.$apply();
     });
   }

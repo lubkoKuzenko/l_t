@@ -3,7 +3,7 @@
     <ul id="contentArea" class="clusterize-content listrap">
         <li ng-repeat="item in vm.rows">
             <name name=item.properties.layers["parking.garage"].data.Name index=$index></name>
-            <button class="btn pull-right" data-click-attr={{$index}}>Click</button>
+            <button class="btn pull-right" data-click-attr={{item.properties.layers["parking.garage"].data.Name}}>Click</button>
         </li>
     </ul>
 </div>
