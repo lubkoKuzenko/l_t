@@ -1,11 +1,11 @@
 machine:
-  timezone:
-    America/Los_Angeles
-  java:
-    version:
-      oraclejdk8
+  node:
+    version: 8
 
-general:
-  branches:
-    only:
-      - master # only build/deploy from master
+dependencies:
+  override:
+    - npm install --dev
+
+test:
+  post:
+    - ./test.sh
