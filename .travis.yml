@@ -1,3 +1,7 @@
 language: node_js
 node_js:
-  - "7.7"
+  - "8"
+install:
+  - npm install -g babel
+  - npm install -g webpack
+  - npm install
