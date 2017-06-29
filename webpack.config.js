@@ -29,5 +29,15 @@ module.exports = {
         loader: 'url-loader?limit=10000&minetype=image/svg+xml' }
     ]
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      numbro: 'numbro/numbro',
+      moment: 'moment/moment',
+      d3: 'd3/d3',
+    })
+  ],
   devtool: 'source-map'
 };
