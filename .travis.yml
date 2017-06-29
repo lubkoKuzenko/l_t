@@ -5,5 +5,4 @@ install:
   - npm install -g babel
   - npm install -g webpack
   - npm install
-script: 
-  - webpack
+  - npm build
