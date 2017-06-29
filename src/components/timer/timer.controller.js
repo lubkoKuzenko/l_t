@@ -11,8 +11,11 @@ export default class TimerController {
 	}	
 
 	setupCounter(){
-		this.counter = 60;
+		this.counter = 10;
 		this.onTimeout = () => {
+			if(this.counter === 0){
+				return false;
+			}
 			this.counter--;
 			mytimeout = this.$timeout(this.onTimeout, 1000);
 		}
